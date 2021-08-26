@@ -10,6 +10,7 @@
 
 .container--baseline {
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer-social-link-container {
   margin-left: 70px;
@@ -41,22 +42,17 @@
 }
 
 .footer__form {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: 70px;
 }
-.footer__input-wrapper {
-  width: 100%;
-  display: flex;
-  justify-items: flex-end;
-}
+
 .footer__email {
   padding: 10px;
   background-color: var(--footer-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  width: 100%;
+  width: 358px;
+  margin-right: 12px;
   color: var(--secondary-text-color);
   &::placeholder {
     font-size: 16px;
