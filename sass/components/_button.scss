@@ -1,0 +1,39 @@
+.button {
+  color: var(--primary-text-color);
+  background-color: var(--bg-additional-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.button.primary {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  &:hover {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.button-menu {
+  justify-content: center;
+  margin-bottom: 50px;
+  & li:not(:last-child) {
+    margin-right: 8px;
+  }
+}
