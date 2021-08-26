@@ -77,3 +77,29 @@
     fill: currentColor;
   }
 }
+@media screen and (max-width: 767px) {
+}
+@media screen and (max-width: 1200px) {
+  .site-nav.list {
+    margin-right: 0px;
+    margin-left: 50px;
+  }
+  .site-nav--left-side {
+    display: flex;
+    flex-direction: column;
+  }
+  .site-nav--left-side li:last-child {
+    margin-left: 0;
+  }
+  .container--flex {
+    justify-content: space-between;
+  }
+  .site-nav .link {
+    padding: 10px 0;
+  }
+  .link.current::after {
+    margin-bottom: -21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+}
