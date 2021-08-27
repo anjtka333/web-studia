@@ -175,10 +175,11 @@
       background-color: var(--footer-bg-color);
     }
   }
-  .container--baseline {
-    text-align: left;
-  }
+
   footer .flex-reset {
     justify-content: left;
+  }
+  .footer__wraper {
+    text-align: left;
   }
 }
