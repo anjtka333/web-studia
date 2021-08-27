@@ -1,8 +1,43 @@
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  // background-image:
+  //  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  //   url(../img/bg.jpg);
+  // 1x mobile
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../img/bg.jpg);
+    url(../img/hero/hero_mobile.jpg);
+  // 2x mobile
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 24ppx) and (max-width: 767px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_mobile@2x.jpg);
+  }
+  // 1x tablet
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_tablet.jpg);
+  }
+  // 2x tablet
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 24ppx) and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_tablet@2x.jpg);
+  }
+  // 1x desktop
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_desktop.jpg);
+  }
+  // 2x desktop
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 24ppx) and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_desktop@2x.jpg);
+  }
   text-align: center;
   background-color: #c4c4c4;
   background-size: cover;
@@ -22,5 +57,10 @@
     max-width: 696px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__title {
+    font-size: 26px;
   }
 }
