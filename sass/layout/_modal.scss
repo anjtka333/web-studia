@@ -17,9 +17,13 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .backdrop {
-    // width: 100vw;
-    // height: 100vh;
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 528px;
   }
 }
 .modal {
@@ -29,11 +33,9 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 1);
   height: 581px;
-  width: 528px;
+  // width: 528px;
   border-radius: 4px;
   padding: 40px;
-  width: 96vw;
-  height: 96vh;
 }
 .modal__close-btn {
   position: absolute;

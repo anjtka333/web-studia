@@ -77,6 +77,19 @@ img {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1200px) {
+  .section--mob-hiden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 382px) {
   .mobile-contacts__link {
     font-size: 24px;
@@ -113,7 +126,7 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: bisque;
+    background-color: #fff;
     transform: translateY(-100%);
     transition: transform 500ms linear;
     z-index: 100;
@@ -239,6 +252,9 @@ body {
 
 .container {
   width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -675,12 +691,26 @@ body {
 .studio-card__item {
   display: flex;
   flex-wrap: wrap;
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 }
 
-.studio-card__item:last-child {
-  margin-right: 0;
+@media screen and (max-width: 767px) {
+  .studio-card__item {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .list-title__icon {
+    width: 100%;
+  }
+  .list-title__icon::before {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-title__icon::before {
+    width: 270px;
+  }
 }
 
 .item--dark {
@@ -688,14 +718,52 @@ body {
 }
 
 .team-card__item {
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-card__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .team-card__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-card__item {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .team-card__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .team-card__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-card__item {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-card__item:last-child {
+    margin-right: 0;
+  }
+  .team-card__item:nth-child(2) {
+    margin-right: 30px;
+  }
+  .team-card__item:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
+  }
 }
 
 .img-overlay {
@@ -734,7 +802,6 @@ body {
   margin-bottom: 30px;
   display: flex;
   height: 120px;
-  width: 270px;
   text-align: center;
   background-position: center;
 }
@@ -839,6 +906,7 @@ body {
 @media screen and (max-width: 767px) {
   .card {
     display: block;
+    margin-bottom: 60px;
   }
   .card-item {
     margin-left: auto;
@@ -851,6 +919,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .flex--unset {
+    margin-bottom: 60px;
+  }
+  .card {
+    justify-content: space-between;
+  }
   .card-item {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
@@ -862,9 +936,21 @@ body {
   .card-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
+  .studio-card__item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  .list-title__icon {
+    width: 100%;
+  }
+  .list-title__icon::before {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .flex--unset {
+    flex-wrap: unset;
+  }
   .card-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
@@ -878,6 +964,13 @@ body {
   }
   .card-item:nth-last-child(-n + 3) {
     margin-bottom: 0;
+  }
+  .studio-card__item {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+  }
+  .studio-card__item:last-child {
+    margin-right: 0;
   }
 }
 
@@ -895,6 +988,7 @@ body {
   display: flex;
   list-style: none;
   max-height: 44px;
+  justify-content: space-between;
 }
 
 .social-list__item {
@@ -947,21 +1041,65 @@ body {
   display: flex;
 }
 
-.company-list__item {
-  display: flex;
-  width: 170px;
-  height: 92px;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .company-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .company-list__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+  .company-list__item:nth-child(even) {
+    margin-right: 0px;
+  }
+  .company-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+  .company-list__item:not(:last-child) {
+    margin-right: 0px;
+  }
+  .company-list__item {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+  }
+  .company-list__item:not(:last-child) {
+    margin-right: 0px;
+  }
 }
 
-.company-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 767px) {
+  .company-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .company-list__item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .company-list__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-list {
+    flex-wrap: nowrap;
+  }
+  .company-list__item:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .company-list__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .company-list__link {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1189,6 +1327,18 @@ body {
   pointer-events: none;
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 528px;
+  }
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -1196,11 +1346,8 @@ body {
   transform: translate(-50%, -50%);
   background-color: white;
   height: 581px;
-  width: 528px;
   border-radius: 4px;
   padding: 40px;
-  width: 96vw;
-  height: 96vh;
 }
 
 .modal__close-btn {
