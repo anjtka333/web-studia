@@ -22,6 +22,8 @@
 }
 
 .button.primary {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
   &:hover {

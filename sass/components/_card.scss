@@ -202,10 +202,11 @@
   }
 }
 .card__title {
+  font-family: roboto;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   margin-bottom: 4px;
   color: var(--primary-text-color);
 }
@@ -258,6 +259,9 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .list-title--light {
+    text-align: left;
+  }
   .flex--unset {
     flex-wrap: unset;
   }
