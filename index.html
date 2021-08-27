@@ -45,7 +45,39 @@
               </svg>+38 096 111 11 11</a>
           </li>
         </ul>
+
+        
+              <button class="burger-btn" data-menu-open>
+                <svg class="burger-btn__icon" width="40" height="40">
+                  <use href="./img/sprite.svg#burger-icon"></use>
+                </svg>
+              </button>
       </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav list">
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link link">О нас</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link link">Услуги и цены</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link link">Мастера</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
     </header>
     <main>
       <!-- <section class="hero">
@@ -432,5 +464,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
