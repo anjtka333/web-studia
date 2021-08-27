@@ -71,7 +71,7 @@
     }
   }
   .mobile__item {
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
@@ -83,7 +83,7 @@
     }
   }
   .mobile-contacts__item {
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
@@ -93,7 +93,7 @@
     color: var(--accent-color);
   }
   .mobile-contacts__link--email {
-    font-family: Roboto;
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -112,10 +112,23 @@
   }
   .mobile-social__link {
     color: var(--accent-color);
+    position: relative;
   }
   .mobile-social__item:not(:last-child) {
     margin-right: 20px;
     margin-bottom: 6px;
+  }
+  .mobile-social__link::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-color: var(--bg-additional-color);
+    background-image: url('../../img/line.svg');
+    height: 22px;
+    top: 0;
+    left: 113%;
+    width: 3px;
   }
 }
 
