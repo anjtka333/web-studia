@@ -87,10 +87,12 @@
     min-height: 60px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .site-nav.list {
     margin-right: 0px;
     margin-left: 50px;
+    padding: 15px 0;
   }
   .site-nav--left-side {
     display: flex;
@@ -103,9 +105,22 @@
     justify-content: space-between;
   }
   .site-nav .link {
-    padding: 5px 0;
+    padding: 0px 0;
   }
   .link.current::after {
-    margin-bottom: -21px;
+    margin-bottom: -26px;
+  }
+  // .site-nav .site-nav__email {
+  //   padding-top: 5px;
+  //   padding-bottom: 0;
+  //   font-size: 12px;
+  // }
+  // .site-nav .site-nav__phone {
+  //   padding-top: 5px;
+  //   padding-bottom: 0px;
+  //   font-size: 12px;
+  // }
+  .site-nav .link {
+    font-size: 12px;
   }
 }
