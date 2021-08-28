@@ -118,7 +118,7 @@
     margin-right: 20px;
     margin-bottom: 6px;
   }
-  .mobile-social__link::after {
+  .mobile__social li:not(:last-child) .mobile-social__link::after {
     position: absolute;
     content: '';
     display: block;

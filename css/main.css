@@ -248,7 +248,7 @@ body {
     margin-right: 20px;
     margin-bottom: 6px;
   }
-  .mobile-social__link::after {
+  .mobile__social li:not(:last-child) .mobile-social__link::after {
     position: absolute;
     content: '';
     display: block;
@@ -379,7 +379,7 @@ body {
   width: 100%;
   background-color: var(--accent-color);
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   right: 0;
 }
 
@@ -434,6 +434,10 @@ body {
   .site-nav .link {
     font-size: 12px;
   }
+}
+
+.mobile__link--current {
+  color: var(--accent-color);
 }
 
 .hero {
@@ -1076,6 +1080,7 @@ body {
 }
 
 .card__container {
+  flex-grow: 1;
   box-sizing: border-box;
   padding: 20px 24px;
   background-color: var(--secondary-text-color);
@@ -1194,6 +1199,9 @@ body {
   .list-title__icon::before {
     width: 100%;
   }
+  .card-item:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1234,6 +1242,15 @@ body {
 
 .card-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-portfolio a {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-portfolio li {
+  display: flex;
 }
 
 .social-list {

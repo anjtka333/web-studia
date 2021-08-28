@@ -62,7 +62,7 @@
   width: 100%;
   background-color: var(--accent-color);
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   right: 0;
 }
 .link {
@@ -123,4 +123,7 @@
   .site-nav .link {
     font-size: 12px;
   }
+}
+.mobile__link--current {
+  color: var(--accent-color);
 }
