@@ -271,6 +271,7 @@
   }
   .flex--unset {
     flex-wrap: unset;
+    margin-bottom: 0;
   }
   .card-item {
     width: calc((100% - 60px) / 3);

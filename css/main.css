@@ -85,6 +85,13 @@ img {
 .section-title {
   margin-bottom: 50px;
   text-align: center;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 32px;
+  }
 }
 
 .link {
@@ -1216,6 +1223,7 @@ body {
   }
   .flex--unset {
     flex-wrap: unset;
+    margin-bottom: 0;
   }
   .card-item {
     width: calc((100% - 60px) / 3);
