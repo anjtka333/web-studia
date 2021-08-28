@@ -8,11 +8,6 @@
   color: var(--secondary-text-color);
 }
 
-// .container--baseline {
-//   align-items: baseline;
-//   justify-content: space-between;
-// }
-
 .footer-social-link-container {
   margin-left: 70px;
 }
@@ -151,6 +146,9 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .footer__wraper {
+    margin-bottom: 0;
+  }
   .container--baseline {
     align-items: baseline;
     justify-content: space-between;

@@ -92,9 +92,10 @@
   .site-nav.list {
     margin-right: 0px;
     margin-left: 50px;
-    padding: 15px 0;
+    // padding: 15px 0;
   }
   .site-nav--left-side {
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
   }
